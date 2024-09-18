@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,800;1,900&family=Work+Sans:ital,wght@0,600;0,800;1,200&display=swap');
+* {
+    margin: 0px;
+    box-sizing: border-box;
+    padding: 0px;
+   
+    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Work Sans', sans-serif;
+    scroll-behavior: smooth;
+  
+}
+
+
+header{
+    background-color: white;
+    width: 100%;
+    /*we use fixed when 
+    scrolling the header will fixed and moving with us*/
+    position: fixed; 
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 90px;
+
+}
+.logo span{font-size: 1.6em;}
+header nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    
+}
+
+.logo{
+    text-decoration: none;
+    color:  rgb(16, 70, 146);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.5em;
+    padding-top: 0px;
+    /* background-color: aqua; */
+}
+header nav a{
+    text-decoration: none;
+    color:  rgb(16, 70, 146);
+    margin: 5px;
+    font-size: 20px;
+    width: fit-content;
+    
+}
+header nav a:hover{
+    color: rgb(91, 91, 240);
+}
+header nav a{
+    position: relative;
+    
+    
+}
+header nav a::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: -5px;
+    left: 0;
+    transition: width .7s ease;
+    background-color: rgb(0, 106, 255);
+}
+header nav a:hover::after{
+    width: 100%;
+}
+/*Main part of section*/
+.main{
+    display: flex;
+    /* background-color: rgb(151, 134, 134); */
+    background-color: rgb(62, 13, 13);
+    width: 100%;
+    align-items: center;
+    min-height: 100vh;
+    /* background: url(computer.image.jpg) no-repeat; */
+    background-size: cover;
+  
+}
+.pre h2, .pre h3{
+    color: white;
+}
+
+
+.main .pre{
+    /* background-color: darkkhaki; */
+    /* min-height: 100vh; */
+     padding: 90px 90px;
+}
+
+.pre span{
+    font-size: 40px;
+    color: rgb(16, 70, 146);
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+
+.pre h2 span{
+    display: inline-block;
+    margin: 10px 0px;
+}
+.btn{
+    padding-bottom: 12px;
+    margin: 15px  15px  15px 0px;
+    color: white;
+    font-size: 1em;
+    border-radius: 15px;
+    width: 150px;
+    text-align: center;
+    background: transparent;
+    overflow: hidden;
+    padding: 0.9375em;
+    border-color: white;
+    position: relative;
+    cursor: pointer;
+}
+.btn:hover::after{
+    content: '';
+    width: 100%;
+    background-color: aquamarine;
+}
+
+.sp{
+    width: 0;
+    position: absolute;
+    background: rgb(52, 106, 181);
+    height: 100%;
+    bottom: 0px;
+    left: 0px;
+    z-index: -1;
+    border-radius: 15px;
+    transition:  0.5s linear;
+}
+
+.btn:hover .sp{
+    width: 100%;
+    
+}
+/* .btn:hover{
+    background-color: rgb(52, 106, 181);
+    cursor: pointer;
+    transform: scale(1.05);
+} */
+.icon{
+display: flex;
+justify-content: space-around;
+width: 200px;
+}
+.icon a i{
+    font-size: 40px;
+    color:  rgb(16, 70, 146);
+}
+
+
+/*service part*/
+.service{
+    background-color:white;
+    padding: 90px 90px;
+    display: flex;
+    flex-direction: column;
+    /* height: 100vh; */
+}
+.product{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+.card{
+    box-shadow: 0 5px 25px rgba(1,1,1,1/15%);
+    width:340px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    padding: 25px;
+    transition: 1s ease;
+}
+.card:hover{
+    transform: scale(1.05);
+    background-color: rgb(118, 109, 100);
+    
+}
+.product .ic{
+    font-size: 50px;
+    text-align: center;
+    padding: 15px;
+    color:  rgb(16, 70, 146);
+}
+.info h3{padding: 5px;}
+.info{
+   padding: 10px;
+   text-align: center;
+}
+.service .head{
+    display: flex;
+    justify-content: center;
+    font-size: 2.2em;
+    color: rgb(16, 70, 146);
+    font-weight: 800px;
+    margin-bottom: 15px;
+}
+@media(max-width:391px){
+    header nav a{
+       /* padding: 0px 0px 0px 5px; */
+       font-size: 16px;
+    }
+    header{
+        padding: 20px 10px;
+    }
+    .main .pre{
+      padding: 10px;
+      
+    }
+}
+@media(max-width: 280px){
+      .card{
+        width: 165px;
+      }
+}
+*{
+    width: 100%;
+
+}
+
+/*Project part*/
+.cont{
+    display: flex;
+    /* flex-direction: column; */
+    /* flex-wrap: wrap; */
+    padding-left: 100px;
+   padding-right: 100px;
+   padding-bottom: 50px;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.project{
+    background-color: rgb(22, 19, 16);
+}
+.pro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0px;
+    color:  rgb(16, 70, 146);
+    font-size: 2.2em;
+    font-weight: 800px;
+    /* background-color:whitesmoke; */
+}
+.folder{
+    border: 1px solid green;
+    width: 320px;
+    border-radius: 15px;
+    background-color:whitesmoke;
+    transition: 1s ease;
+    box-shadow: 0 5px 25px rgba(1,1,1,1/15%);
+}
+.folder:hover{
+    transform: scale(1.05);
+    background-color: rgb(118, 109, 100);
+}
+.image img{
+    border-radius: 15px 15px 0px 0px;
+    height: 150px;
+}
+
+.detail{
+    padding: 6px 0px 10px 10px;
+}
+.detail a{text-decoration: none;}
+.dev{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 5px;
+}
+.detail p{
+    font-size: 15px;
+}
+
+/*footer part*/
+footer{
+    background-color:white;
+    padding: 90px 90px;
+}
+.contact{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    justify-content: center;
+}
+footer h3{
+    text-align: center;
+    font-size: 2.2em;
+    font-weight: 800px; 
+    color:  rgb(16, 70, 146);
+    padding-bottom: 25px;
+}
+.phone, .email{
+    background-color: rgb(235, 241, 241);
+    width: 340px;
+    height: 180px;
+    text-align: center;
+    padding: 5px 0px;
+    border-radius: 6px;
+    transition: 1s ease;
+    box-shadow: 0 5px 25px rgba(1,1,1,1/15%);
+}
+.phone:hover,.email:hover{
+    transform: scale(1.05);
+    background-color: rgb(118, 109, 100);
+}
+.ico{
+    font-size: 60px;
+    color:  rgb(16, 70, 146);
+    padding: 20px 0px;
+   
+    /* background-color: aliceblue; */
+}
+.element p{
+    /* background-color: blueviolet; */
+    padding: 5px;
+   
+}
+
+
